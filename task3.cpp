@@ -67,3 +67,22 @@ int main(){
     f.close()
     return 0 ;    
 }
+// eof function
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std ;
+int main(){
+    string str;
+    fstream f;
+    f.open("file.txt",ios::in);
+    while(!f.eof()){
+        f >> str ;
+        cout << str << endl;
+    }
+    f.close()
+    return 0 ;    
+}
+
+
+
