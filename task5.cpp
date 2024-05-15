@@ -1,3 +1,5 @@
+/*
+
 #include<iostream>
 #include<fstream>
 #include<string>
@@ -44,7 +46,11 @@ int main(){
     return 0;
 }
 
+*/
+
 /**************** seekg from begging(read) ***/
+
+/*
 #include<iostream>
 #include<fstream>
 #include<string>
@@ -59,6 +65,27 @@ file.seekg(4,ios::beg);
 file >> ch;
 cout << ch << endl;
 
+file.close();
+system("pause");
+}
+
+*/
+
+/**************** seekp from end *******/
+#include<iostream>
+#include<fstream>
+#include<string>
+using namespace std;
+int main()
+{
+fstream file;
+file.open("file.txt",ios::out);
+file<<"hello world";
+
+file.seekp(2,ios::beg);
+file<<"this is section";
+
+cout <<file.tellp()<<endl;
 file.close();
 system("pause");
 }
